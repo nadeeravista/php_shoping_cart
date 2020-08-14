@@ -3,6 +3,23 @@ This is simple shpoping cart application written using vanilla php No PHP or jav
 
 ### How to install
 Basic PHP and apache or suitable web server can run this application. 
+Clone or copy the content of this repository to the webroot
+
+### How to run
+Visit the document folder copied from your favourite we browser
+
+### Changing intial data
+Change the following array on config.php in the directory root
+
+```php
+$products = [
+    [ "name" => "Sledgehammer", "price" => 125.75 ],
+    [ "name" => "Axe", "price" => 190.50 ],
+    [ "name" => "Bandsaw", "price" => 562.131 ],
+    [ "name" => "Chisel", "price" => 12.9 ],
+    [ "name" => "Hacksaw", "price" => 10.50 ],
+   ];
+```
 
 ### Licnese
 Its an opensource. You have full freedom to dowload change and enhanse.
