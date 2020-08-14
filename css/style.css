@@ -1,0 +1,17 @@
+div {
+    width: 35%;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.products {
+    background-color: lightgrey;
+}
+
+div.cart {
+    background-color: lightblue;
+}
+
+.message {
+    background-color: lightcyan;
+}
