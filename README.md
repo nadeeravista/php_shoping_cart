@@ -26,11 +26,11 @@ The composer will install phpunit tests. Kindly note that unit test are not writ
 
 #### Installing phpunit locally
 ```php
->composer install
+$composer install
 ```
 #### Running unit tests
 ```php
->cd tests
+$cd tests
 >../vendor/bin/phpunit CartTest.php
 ```
 
