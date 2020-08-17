@@ -21,6 +21,18 @@ $products = [
    ];
 ```
 
+### Running unit tests
+The composer will install phpunit tests. Kindly note that unit test are not written as per the task requiments and time limitations. Just the template is written.
+
+#### Installing phpunit locally
+```php
+>composer install
+```
+#### Running unit tests
+>cd tests
+>../vendor/bin/phpunit CartTest.php
+```
+
 ### Licnese
 Its an opensource. You have full freedom to dowload change and enhanse.
 [GNU General Public License version 3 (GPLv3)](https://www.gnu.org/licenses/quick-guide-gplv3.en.html#:~:text=Tivoization%20is%20a%20dangerous%20attempt,modified%20software%20on%20the%20device.)
