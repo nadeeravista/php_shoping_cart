@@ -1,5 +1,5 @@
 ### Overview
-This is simple shpoping cart application written using vanilla php No PHP or javascript framework used. No data storage used. Further enhansments are need to to store the persistant data. No payment facilities are provided. 
+This is simple shpping cart application written using vanilla php No PHP or javascript framework used. No data storage used. Further enhansments are need to to store the persistant data. No payment facilities are provided. 
 
 ### How to install
 Basic PHP and apache or suitable web server can run this application. 
