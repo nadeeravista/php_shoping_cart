@@ -29,6 +29,7 @@ The composer will install phpunit tests. Kindly note that unit test are not writ
 >composer install
 ```
 #### Running unit tests
+```php
 >cd tests
 >../vendor/bin/phpunit CartTest.php
 ```
