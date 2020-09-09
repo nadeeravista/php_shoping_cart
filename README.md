@@ -28,11 +28,30 @@ The composer will install phpunit tests. Kindly note that unit test are not writ
 ```php
 $composer install
 ```
+
+#### Autoloading classes
+You can do any changes to directory structure as you wish. Run the following code flollowed by the changes done to composer.json file
+```
+composer dump-autoload
+```  
+```
+ "autoload": {
+        "psr-4": {
+            "Nadeera\\Shopping\\": "src/shopping",
+            "Vendor\\Namespace\\": ""
+        }
+    },
+    .....
+```
+
+
+
 #### Running unit tests
 ```php
 $cd tests
 >../vendor/bin/phpunit CartTest.php
 ```
+
 
 ### Licnese
 Its an opensource. You have full freedom to dowload change and enhanse.

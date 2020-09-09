@@ -1,8 +1,9 @@
 {
     "autoload": {
-        "classmap": [
-            "vendor/"
-        ]
+        "psr-4": {
+            "Nadeera\\Shopping\\": "src/shopping",
+            "Vendor\\Namespace\\": ""
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^8"
