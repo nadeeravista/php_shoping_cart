@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace Nadeera\Shopping;
 
-use App\Product;
-use App\CartItem;
+use Nadeera\Shopping\Product;
+use Nadeera\Shopping\CartItem;
 
 /**
  * Represents the Shoping cart
