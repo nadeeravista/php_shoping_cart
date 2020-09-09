@@ -6,10 +6,18 @@
  */
 
 include "./config.php";
-include_once('./src/Product.php');
-include_once('./src/Cart.php');
-include_once('./src/CartItem.php');
+
+require_once realpath("vendor/autoload.php");
+
+/**
+ * This is a vanilla php app, thus the actions.php is the global route file and controller 
+ */
 include_once('./actions.php');
+
+/**
+ * This app has only a simple action route and one view, thus it is including directly rather 
+ * render using a response class
+ */
 include_once('./view.php');
 ?>
 
