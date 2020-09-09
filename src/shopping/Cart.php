@@ -162,7 +162,10 @@ class Cart
      */
     public function clearCart(): void
     {
-        session_destroy();
+        if(session_status() === PHP_SESSION_ACTIVE) {
+            session_destroy();
+        }
+        
         $this->items = array();
         $this->total = 0;
     }
