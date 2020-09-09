@@ -9,7 +9,7 @@
  * Getting the singleton object of the cart
  * @return Cart
  */
-$cart = App\Cart::getCart();
+$cart = \Nadeera\Shopping\Cart::getCart();
 
 $message = "";
 
@@ -21,8 +21,8 @@ if (isset($_REQUEST['action'])) {
 
         case 'add_to_cart':
             $productName = $_REQUEST['product'];
-            $product = new App\Product($products);
-            $cart = new App\Cart();
+            $product = new \Nadeera\Shopping\Product($products);
+            $cart = new \Nadeera\Shopping\Cart();
             $cart->setProduct($product);
             $cart->addItem($productName);
             $message = "The item <b>$productName</b> added to cart";
@@ -30,19 +30,19 @@ if (isset($_REQUEST['action'])) {
 
         case 'remove_cart_item':
             $productName = $_REQUEST['product'];
-            $cart = new App\Cart();
+            $cart = new \Nadeera\Shopping\Cart();
             $cart->removeItem($productName);
             $message = "The item <b>$productName</b> removed from the";
             break;
 
         case 'clear_cart':
-            $cart = new App\Cart();
+            $cart = new \Nadeera\Shopping\Cart();
             $cart->clearCart();
             header('Location: ./'.$baseFile.'?action');
             break;
 
         default:
-            $cart = new App\Cart();
+            $cart = new \Nadeera\Shopping\Cart();
             break;
     }
 }
