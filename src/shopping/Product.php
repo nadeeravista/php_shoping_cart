@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace Nadeera\Shopping;
 
 /**
  * Represents the Products for the shopign cart

@@ -1,5 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
+use Nadeera\Shopping\Product;
 
 class CartTest extends TestCase
 {
@@ -15,7 +16,7 @@ class CartTest extends TestCase
     }
 
     public function testAddItem(){
-        
+        $product = new Product(array());
         //testing and assertion goes here
     }
 
