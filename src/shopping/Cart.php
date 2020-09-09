@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace Nadeera\Shopping;
 
-use App\Product;
-use App\CartItem;
+use Nadeera\Shopping\Product;
+use Nadeera\Shopping\CartItem;
 
 /**
  * Represents the Shoping cart
@@ -162,7 +162,10 @@ class Cart
      */
     public function clearCart(): void
     {
-        session_destroy();
+        if(session_status() === PHP_SESSION_ACTIVE) {
+            session_destroy();
+        }
+        
         $this->items = array();
         $this->total = 0;
     }
