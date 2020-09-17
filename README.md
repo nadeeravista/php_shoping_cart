@@ -1,8 +1,8 @@
 ### Overview
-This is simple shpping cart application written using vanilla php No PHP or javascript framework used. No data storage used. Further enhansments are need to to store the persistant data. No payment facilities are provided. 
+This is a simple shopping cart application written using vanilla PHP. No PHP or javascript framework has been used. No data storage was used. Further enhancements are needed to store the persistent data. No payment facilities are provided. 
 
 ### How to install
-Basic PHP and apache or suitable web server can run this application. 
+Basic PHP and apache or a suitable web server can run this application. 
 Clone or copy the content of this repository to the webroot
 
 ### How to run
@@ -22,7 +22,7 @@ $products = [
 ```
 
 ### Running unit tests
-The composer will install phpunit tests. Kindly note that unit test are not written as per the task requiments and time limitations. Just the template is written.
+The composer will install PHPUnit tests.
 
 #### Installing phpunit locally
 ```php
