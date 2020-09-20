@@ -6,8 +6,6 @@
  */
 
 ini_set('display_errors', 1);
-ini_set('expose_php', 'Off');
 ini_set('display_startup_errors', 1);
+ini_set("error_log", "/var/www/html/php.log");
 error_reporting(E_ALL);
-
-$baseFile = "index.php";
