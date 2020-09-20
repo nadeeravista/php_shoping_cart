@@ -3,10 +3,8 @@ PHP or javascript framework has been used. No data storage was used. Further enh
 
 ### How to install
 Basic PHP and apache or a suitable web server can run this application. 
-Clone or copy the content of this repository to the webroot
+Clone or copy the content of this repository to the webroot or use the the docker container [Docker container for this code](https://github.com/nadeeravista/apache-mysql-php-docker)
 
-### How to run
-Visit the document folder copied from your favourite we browser
 
 ### Changing intial data
 Change the following array on config.php in the directory root
