@@ -4,6 +4,7 @@
  * @author Nadeera
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
+
 ?>
 
 <html>
@@ -22,7 +23,7 @@
         <ul>
             <?php foreach ($products as $productId=>$product) { ?>
                 <li>
-                    Name: <?php echo $product['name'] ?> | Price: <?php echo format_price($product['price']) ?> | <a href='./<?php echo $baseFile ?>?action=add_to_cart&product=<?php echo $product['name'] ?>'>Add</a>
+                    Name: <?php echo $product['name'] ?> | Price: <?php echo $helper->formatPrice($product['price']) ?> | <a href='./<?php echo $baseFile ?>?action=add_to_cart&product=<?php echo $product['name'] ?>'>Add</a>
                 </li>
             <?php } ?>
         </ul>
@@ -33,11 +34,11 @@
             <?php foreach ($cart->getItems() as $item) { ?>
                 <ul>
                     <li>
-                        <?php echo $item->name?> | Price: <?php echo format_price($item->price) ?> | Quantity: <?php echo $item->quantity ?> | <a href='./<?php echo $baseFile ?>?action=remove_cart_item&product=<?php echo $item->name ?>'> Remove </a>
+                        <?php echo $item->name?> | Price: <?php echo $helper->formatPrice($item->price) ?> | Quantity: <?php echo $item->quantity ?> | <a href='./<?php echo $baseFile ?>?action=remove_cart_item&product=<?php echo $item->name ?>'> Remove </a>
                     </li>
                 </ul>
             <?php } ?>
-            <h4>Cart total: <?php echo format_price( $cart->getTotal() ); ?></h4>
+            <h4>Cart total: <?php echo $helper->formatPrice($cart->getTotal()); ?></h4>
             <br />
             <a href='./<?php echo $baseFile ?>?action=clear_cart'>Clear the cart</a>
         <?php } else { ?>
