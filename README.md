@@ -18,6 +18,9 @@ $products = [
     [ "name" => "Hacksaw", "price" => 10.50 ],
    ];
 ```
+### Settingup unit test suite
+Add your test class inside the following file and give proper names for each suite  
+phpunit.xml
 
 ### Running unit tests
 The composer will install PHPUnit tests.
@@ -45,8 +48,7 @@ composer dump-autoload
 
 #### Running unit tests
 ```php
-$cd tests
->../vendor/bin/phpunit CartTest.php
+$./vendor/bin/phpunit --testsuite cart
 ```
 
 
