@@ -21,7 +21,7 @@ $products = [
    ];
 ```
 ### Settingup unit test suite
-Add your test class inside the following file and give proper names for each suite
+Add your test class inside the following file and give proper names for each suite  
 phpunit.xml
 
 ### Running unit tests
