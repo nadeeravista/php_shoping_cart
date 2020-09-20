@@ -1,5 +1,5 @@
 ### Overview
-This is a simple shopping cart application written using vanilla PHP. No PHP or javascript framework has been used. No data storage was used. Further enhancements are needed to store the persistent data. No payment facilities are provided. 
+PHP or javascript framework has been used. No data storage was used. Further enhancements are needed to store persistent data. No payment facilities are provided.
 
 ### How to install
 Basic PHP and apache or a suitable web server can run this application. 
