@@ -9,7 +9,6 @@ use Nadeera\Facades\ViewHelper;
  * @author Nadeera
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
-
 class Response
 {
     /**

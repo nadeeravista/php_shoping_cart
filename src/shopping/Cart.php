@@ -10,7 +10,6 @@ use Nadeera\Shopping\CartItem;
  * @author Nadeera
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
-
 class Cart
 {
     private static $cart;
