@@ -2,6 +2,8 @@
 
 namespace Nadeera\Facades;
 
+use Nadeera\Facades\ViewHelper;
+
 /**
  * Represents handing the response genereated at the controller/action
  * @author Nadeera
@@ -30,6 +32,7 @@ class Response
         } else {
             $data = $data;
         }
+        $helper = new ViewHelper();
         include "./config.php";
         include $filePath;
     }
