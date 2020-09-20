@@ -1,4 +1,5 @@
 <?php
+
 namespace Nadeera\Shopping;
 
 /**
@@ -16,25 +17,45 @@ class Product
     private $products;
 
     /**
-     * Injecting dependancy of data to the class in object cration
+     * Gets list of product as array
      *
-     * @param array $products Product list as array
+     * @return void
      */
-    public function __construct($products)
+    public function getProducts(): array
+    {
+        if ($this->products == null) {
+            return  [
+                ["name" => "Sledgehammer", "price" => 125.75],
+                ["name" => "Axe", "price" => 190.50],
+                ["name" => "Bandsaw", "price" => 562.131],
+                ["name" => "Chisel", "price" => 12.9],
+                ["name" => "Hacksaw", "price" => 10.50],
+            ];
+        } else {
+            return $this->products;
+        }
+    }
+
+    /**
+     *  Injecting product list
+     *
+     * @param array $products Sets product list as array
+     * @return void
+     */
+    public function setProducts(array $products): void
     {
         $this->products = $products;
     }
 
     /**
-     * Undocumented function
+     * Search and gets a product by name
      *
      * @param string $name Name of the product
      * @return array The product details as array
      */
     public function getByName(string $name): array
     {
-        $key = array_search($name, array_column($this->products, 'name'));
-        return $this->products[$key];
+        $key = array_search($name, array_column($this->getProducts(), 'name'));
+        return $this->getProducts()[$key];
     }
 }
-
