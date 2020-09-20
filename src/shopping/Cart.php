@@ -17,14 +17,14 @@ class Cart
     private $total = 0;
 
     /**
-     * @var [array]
+     * @var array
      */
     private $items = array();
 
     /**
      * Dependancy injection of product class
      *
-     * @var [Product]
+     * @var Product
      */
     public $product;
 
@@ -162,10 +162,10 @@ class Cart
      */
     public function clearCart(): void
     {
-        if(session_status() === PHP_SESSION_ACTIVE) {
+        if (session_status() === PHP_SESSION_ACTIVE) {
             session_destroy();
         }
-        
+
         $this->items = array();
         $this->total = 0;
     }
@@ -175,7 +175,7 @@ class Cart
      *
      * @return App\Cart
      */
-    public static function getCart()
+    public static function getCart(): Cart
     {
         if (self::$cart == null) {
             self::$cart = (new Cart());
