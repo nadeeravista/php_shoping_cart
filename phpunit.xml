@@ -3,5 +3,9 @@
     <testsuite name="cart">
       <file>tests/CartTest.php</file>
     </testsuite>
+    <testsuite name="facades">
+      <file>tests/facades/PriceTest.php</file>
+      <file>tests/facades/ViewHelperTest.php</file>
+    </testsuite>
   </testsuites>
 </phpunit>

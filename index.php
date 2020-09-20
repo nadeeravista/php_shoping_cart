@@ -5,19 +5,22 @@
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 
-include "./config.php";
+
+ /**
+  * This header secure the application from XSS attacks
+  */
+header( "Set-Cookie: name=value; httpOnly" );
 
 require_once realpath("vendor/autoload.php");
 
 /**
- * This is a vanilla php app, thus the actions.php is the global route file and controller 
+ * Setting initial php settings
  */
-include_once('./actions.php');
+include_once('./config.php');
 
 /**
- * This app has only a simple action route and one view, thus it is including directly rather 
- * render using a response class
+ * This is a vanilla php app, thus the actions.php is acting as the global route file and the controller 
  */
-include_once('./view.php');
+include_once('./actions.php');
 ?>
 

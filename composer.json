@@ -2,6 +2,7 @@
     "autoload": {
         "psr-4": {
             "Nadeera\\Shopping\\": "src/shopping",
+            "Nadeera\\Facades\\": "src/facades",
             "Vendor\\Namespace\\": ""
         }
     },
