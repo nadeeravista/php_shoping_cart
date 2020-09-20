@@ -7,7 +7,7 @@ Clone or copy the content of this repository to the webroot or use the the docke
 
 
 ### Changing intial data
-Change the following array on config.php in the directory root
+Change the following array on \src\shopping\Product  in the directory root
 
 ```php
 $products = [
