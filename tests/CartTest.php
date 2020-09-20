@@ -6,25 +6,26 @@ use Nadeera\Shopping\Product;
 
 class CartTest extends TestCase
 {
-    
-
     /**
      * Validate the total when various items added to cart
      *
      * @return void
      */
-    public function testCalculateTotal(){
-        
+    public function testCalculateTotal()
+    {
+
         $products = [
-            [ "name" => "Sledgehammer", "price" => 125.75 ],
-            [ "name" => "Axe", "price" => 190.50 ],
-            [ "name" => "Bandsaw", "price" => 562.131 ],
-            [ "name" => "Chisel", "price" => 12.9 ],
-            [ "name" => "Hacksaw", "price" => 10.50 ],
-           ];
+            ["name" => "Sledgehammer", "price" => 125.75],
+            ["name" => "Axe", "price" => 190.50],
+            ["name" => "Bandsaw", "price" => 562.131],
+            ["name" => "Chisel", "price" => 12.9],
+            ["name" => "Hacksaw", "price" => 10.50],
+        ];
 
 
-        $product = new Product($products);
+        $product = new Product();
+        $product->setProducts($products);
+
         $cart = new Cart();
         $cart->clearCart();
 
@@ -35,7 +36,6 @@ class CartTest extends TestCase
         $cart->addItem('Sledgehammer');
         $this->assertEquals(316.25, $cart->getTotal());
         $cart->clearCart();
-        
     }
 
     /**
@@ -43,15 +43,18 @@ class CartTest extends TestCase
      *
      * @return void
      */
-    public function testCheckAddingItemsToCart(){
+    public function testCheckAddingItemsToCart()
+    {
 
         $products = [
-            [ "name" => "Sledgehammer", "price" => 125.75 ],
-            [ "name" => "Axe", "price" => 190.50 ],
-           ];
+            ["name" => "Sledgehammer", "price" => 125.75],
+            ["name" => "Axe", "price" => 190.50],
+        ];
 
-           
-        $product = new Product($products);
+
+        $product = new Product();
+        $product->setProducts($products);
+
         $cart = new Cart();
         $cart->clearCart();
 
@@ -67,14 +70,17 @@ class CartTest extends TestCase
      *
      * @return void
      */
-    public function testAddingSameItemAgainToCart(){
+    public function testAddingSameItemAgainToCart()
+    {
 
         $products = [
-            [ "name" => "Sugar", "price" => 10 ],
-           ];
+            ["name" => "Sugar", "price" => 10],
+        ];
 
-           
-        $product = new Product($products);
+
+        $product = new Product();
+        $product->setProducts($products);
+        
         $cart = new Cart();
         $cart->clearCart();
 
@@ -87,7 +93,5 @@ class CartTest extends TestCase
         $this->assertEquals(20, $cart->getTotal());
 
         $cart->clearCart();
-
     }
-
 }
