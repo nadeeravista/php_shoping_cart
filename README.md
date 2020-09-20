@@ -43,7 +43,6 @@ composer dump-autoload
 ```
 
 
-
 #### Running unit tests
 ```php
 $cd tests
