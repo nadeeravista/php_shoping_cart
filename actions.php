@@ -33,26 +33,34 @@ if (isset($_REQUEST['action'])) {
 
             $productName = $_REQUEST['product'];
             $cart = Cart::getCart();
-            $cart->setProduct(new Product());
+            $product = new Product();
+            $cart->setProduct($product);
             $cart->addItem($productName);
+            
             $responseData['message'] = "The item <b>$productName</b> added to cart";
             $responseData['cart'] = $cart;
+            $responseData['products'] = $product->getProducts();
+
             Response::view("views.shopping.cart_view", $responseData);
             break;
 
         case 'remove_cart_item':
 
             $productName = $_REQUEST['product'];
-            $cart = new Cart();
+            $cart = Cart::getCart();
+            $product = new Product();
             $cart->removeItem($productName);
+
             $responseData['message'] = "The item <b>$productName</b> removed from the";
             $responseData['cart'] = $cart;
+            $responseData['products'] = $product->getProducts();
+
             Response::view("views.shopping.cart_view", $responseData);
             break;
 
         case 'clear_cart':
 
-            $cart = new Cart();
+            $cart = Cart::getCart();
             $cart->clearCart();
             header('Location: ./' . $baseFile . '?action');
             break;
@@ -60,7 +68,11 @@ if (isset($_REQUEST['action'])) {
         default:
 
             $cart = Cart::getCart();
+            $product = new Product();
+
             $responseData['cart'] = $cart;
+            $responseData['products'] = $product->getProducts();
+
             Response::view("views.shopping.cart_view", $responseData);
             break;
     }
